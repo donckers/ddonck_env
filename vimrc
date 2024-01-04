@@ -150,13 +150,15 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme nord
-    AirlineTheme nord
+    " colorscheme nord
+    colorscheme codedark
 catch
 endtry
 
-let g:airline_solarized_bg = 'dark'
+let g:airline_theme = 'base16_spacemacs'
 let g:airline_powerline_fonts = 1
+" let g:airline_solarized_bg = 'dark'
+
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -188,8 +190,8 @@ set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guioptions-=T
-    " set guioptions-=e
+    " set guioptions-=T
+    set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
 endif
@@ -200,7 +202,8 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-set guifont=SourceCodeProForPowerline-Regular:h11
+" set guifont=SourceCodeProForPowerline-Regular:h11
+set guifont=MesloLGS\ NF:h11
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -424,3 +427,7 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
+try
+    AirlineTheme base16_spacemacs
+catch
+endtry
