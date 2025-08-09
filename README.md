@@ -46,3 +46,10 @@ Link `~/.vimrc` to the `vimrc` file in this directory
 ```bash
 ln -s $(pwd)/vimrc ~/.vimrc
 ```
+
+
+# Testing
+
+## How does this work?
+
+I'm hoping this is as useful as it could be.  Please live up to the potential.
