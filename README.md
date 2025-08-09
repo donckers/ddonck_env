@@ -50,6 +50,36 @@ ln -s $(pwd)/vimrc ~/.vimrc
 
 # Testing
 
-## How does this work?
+To verify your environment setup, run the following commands to ensure key tools are installed and configured correctly:
 
-I'm hoping this is as useful as it could be.  Please live up to the potential.
+1. **Check Xcode CLI tools:**
+
+    ```bash
+    xcode-select -p
+    ```
+    This should output a path like `/Applications/Xcode.app/Contents/Developer`.
+
+2. **Check Homebrew installation:**
+
+    ```bash
+    brew --version
+    ```
+    This should output the installed Homebrew version.
+
+3. **Check Anaconda installation:**
+
+    ```bash
+    conda --version
+    ```
+    This should output the installed conda version.
+
+4. **Check Vim configuration:**
+
+    Open Vim and check if your custom configuration is loaded:
+
+    ```bash
+    vim --version
+    ```
+    Look for lines indicating your `.vimrc` is being sourced.
+
+If all commands return expected outputs, your environment is set up correctly.
